@@ -9,33 +9,218 @@ body {
     color: #fff;
     padding: 20px;
   }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  nav{
+    display: flex;
   }
+.navbar {
+  list-style-type: none;
+  margin: auto;
+  padding-left: 70px;
+  padding-right: 70px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgb(62, 62, 62);
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: aliceblue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: aliceblue;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(40, 40, 40);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(40, 40, 40);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: aliceblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(62, 62, 62);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
   
-  nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .hero {
+  /* .hero {
     background-image: url(hero.jpg);
     background-size: cover;
     height: 400px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
+  }
+  .hero h1, p{
+    padding: 5px;
+    color: black;
+  } */
+  .ban_sec {
+    width: 100%;
+    background-color: #50af47;
+  }
+  .ban_back {
+    width: 1500px;
+    padding-bottom: 29px;
+    height: 300px;
+    position: relative;
+  }
+  /* .ban_ img {
+    width: 100%;
+  } */
+  .ban_text {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .ban_text strong {
+    font: 800 62.22px/70px "Montserrat", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .ban_text strong span {
+    font: 400 44.44px/52px "Montserrat", sans-serif;
+    letter-spacing: 3px;
+  }
+  .ban_text p {
+    font: 400 25px/30px "Montserrat", sans-serif;
+    color: #fff;
+    margin: 7px 0 25px;
+  }
+  .ban_text a {
+    display: inline-block;
+    font: 800 19.39px/24px "Montserrat", sans-serif;
+    background: #282828;
+    border-radius: 26px;
+    color: #fff;
+    padding: 12px 28px;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-decoration:none;
+  }
+  .ban_text a:hover {
+    background: #50af47;
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    .ban_text p {
+      font-size: 21px;
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .ban_text p {
+      font-size: 17px;
+    }
+    .ban_text strong {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    .ban_text strong span {
+      font-size: 37px;
+    }
+    .ban_text a {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .ban_text strong {
+      font-size: 35px;
+      line-height: 40px;
+    }
+    .ban_text strong span {
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: 2px;
+    }
+    .ban_text p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .ban_text a {
+      font-size: 13.39px;
+      line-height: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .ban_img img {
+      min-height: 290px;
+      object-fit: cover;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .ban_text strong {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      width: 100%;
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .ban_text strong span {
+      font-size: 22px;
+      line-height: 31px;
+      letter-spacing: 1px;
+    }
+    .ban_text {
+      left: 2%;
+    }
   }
   
   .btn {
