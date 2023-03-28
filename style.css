@@ -12,13 +12,56 @@ body {
   nav{
     display: flex;
   }
+  
+  /*  PREMIUM BUTTON */
+.custom-btn {
+  
+    height: 36px;
+    color: #fff;
+    border-radius: 13px;
+    padding: 0px 18px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,1), 0px 1px 3px rgba(0,0,0,0.3);
+    outline: none;
+    border: 1px solid #ba6;
+}
+.custom-btn:active{
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+}
+.btn-4{
+  height: 29px;
+  color: #fff;
+background-image: -webkit-repeating-linear-gradient(left, rgba(255, 238, 170, 0) 0%, rgba(255, 238, 170, 0) 3%, rgba(255, 238, 170, .1) 3.75%),
+   -webkit-repeating-linear-gradient(left, rgba(170, 153, 85, 0) 0%, rgba(170, 153, 85, 0) 2%, rgba(170, 153, 85, .03) 2.25%),
+   -webkit-repeating-linear-gradient(left, rgba(255, 238, 170, 0) 0%, rgba(255, 238, 170, 0) .6%, rgba(255, 238, 170, .15) 1.2%),
+   
+   linear-gradient(180deg, #a95 0%, 
+   #fea 47%, 
+   #dc8 53%,
+   #fea 100%);
+ 
+}
+
+/* PREMIUM BUTTON ; ENDS */
+
 .navbar {
   list-style-type: none;
   margin: auto;
+  padding-top: 11px;
   padding-left: 70px;
   padding-right: 70px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 32px;
   background-color: rgb(62, 62, 62);
 }
 
@@ -232,10 +275,6 @@ body {
     margin-top: 20px;
   }
   
-  .about {
-    background-color: #f2f2f2;
-    padding: 40px;
-  }
   
   .courses {
     display: flex;
@@ -251,3 +290,102 @@ body {
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(0,0,0,0);
   }  
+    /* coarousel         */
+  
+.carousel {
+  width: 800px;
+  margin: 100px auto;
+  background-color: #087f5b;
+  padding: 32px 48px 32px 86px;
+
+  border-radius: 8px;
+  position: relative;
+
+  display: flex;
+  gap: 86px;
+}
+
+img {
+  height: 200px;
+  border-radius: 8px;
+  transform: scale(1.5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: #e6fcf5;
+}
+
+.testimonial-author {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #c3fae8;
+}
+
+.testimonial-job {
+  font-size: 12px;
+  color: #c3fae8;
+}
+
+/* CONTROLS */
+.btn {
+  background-color: #fff;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn--left {
+  left: 0;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.btn--right {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.btn-icon {
+  height: 24px;
+  width: 24px;
+  stroke: #087f5b;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 32px);
+
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border: 2px solid #087f5b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot--fill {
+  background-color: #087f5b;
+}
+/* carousal ends */
